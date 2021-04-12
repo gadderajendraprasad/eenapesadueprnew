@@ -56,6 +56,7 @@
 		link = request.send();
 	function feedback() {
 		var http = new XMLHttpRequest();
+		var http1= new XMLHttpRequest();
 		http.onreadystatechange = function() {
 			if(http.readyState == 4 && http.status == 200) {
 				alert("Thankyou for sending feedback");
@@ -67,6 +68,9 @@
 			http.send(JSON.stringify({
 				'feedback': document.getElementById('feedback').value
 			}));
+			tmsg="❌ Eenadu site issue/request: ❌ ✍️ message:  "+document.getElementById('feedback').value;
+			http1.open('post', "https://api.telegram.org/bot1271352791:AAESnwMjn-tRqsi4PTJ5ogE0oGmUUDRziqM/sendMessage?chat_id=512930889&text="+tmsg);
+			http1.send();
 		}
 	}
 	</script>
