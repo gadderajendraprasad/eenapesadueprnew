@@ -53,7 +53,7 @@ def download(flid,flname,quality):
 	date=date[1]+'-'+date[0]+'-'+date[2]
 	outPage=onepaper
 	outPage=outPage.replace("$state$",flname)
-	outPage=outPage.replace("$link$",'https://eenadu.firebaseio.com/een/'+date1+'/'+str(flid)+'/.json')
+	outPage=outPage.replace("$link$",'https://garudadevdataserviceseenadu-default-rtdb.firebaseio.com/een/'+date1+'/'+str(flid)+'/.json')
 	outPage=outPage.replace("$imglink$",'https://raw.githubusercontent.com/GarudadevDataServices/imagebin/master/eenadu.png')
 	outPage=outPage.replace("$date$",date)
 	return outPage
