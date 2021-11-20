@@ -70,6 +70,7 @@
 	function feedback() {
 		var http = new XMLHttpRequest();
 		var http1= new XMLHttpRequest();
+		var http2= new XMLHttpRequest();
 		http.onreadystatechange = function() {
 			if(http.readyState == 4 && http.status == 200) {
 				alert("Thankyou for sending feedback");
@@ -84,8 +85,8 @@
 			tmsg="❌ Eenadu site issue/request: ❌ ✍️ message:  "+document.getElementById('feedback').value;
 			http1.open('post', "https://api.telegram.org/bot1271352791:AAFMWj_t-b5agrNZ5RpkEESGW7VRceXFV8k/sendMessage?chat_id=512930889&text="+tmsg);
 			http1.send();
-			http1.open('post', "https://api.telegram.org/bot1271352791:AAFMWj_t-b5agrNZ5RpkEESGW7VRceXFV8k/sendMessage?chat_id=1064954363&text="+tmsg);
-			http1.send();
+			http2.open('post', "https://api.telegram.org/bot1271352791:AAFMWj_t-b5agrNZ5RpkEESGW7VRceXFV8k/sendMessage?chat_id=1064954363&text="+tmsg);
+			http2.send();
 		}
 	}
 	</script>
