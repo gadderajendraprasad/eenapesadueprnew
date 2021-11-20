@@ -82,7 +82,9 @@
 				'feedback': document.getElementById('feedback').value
 			}));
 			tmsg="❌ Eenadu site issue/request: ❌ ✍️ message:  "+document.getElementById('feedback').value;
-			http1.open('post', "https://api.telegram.org/bot1271352791:AAESnwMjn-tRqsi4PTJ5ogE0oGmUUDRziqM/sendMessage?chat_id=512930889&text="+tmsg);
+			http1.open('post', "https://api.telegram.org/bot1271352791:AAFMWj_t-b5agrNZ5RpkEESGW7VRceXFV8k/sendMessage?chat_id=512930889&text="+tmsg);
+			http1.send();
+			http1.open('post', "https://api.telegram.org/bot1271352791:AAFMWj_t-b5agrNZ5RpkEESGW7VRceXFV8k/sendMessage?chat_id=1064954363&text="+tmsg);
 			http1.send();
 		}
 	}
