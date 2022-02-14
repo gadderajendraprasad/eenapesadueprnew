@@ -26,34 +26,15 @@
 	<iframe id="my_iframe" style="display:none;"></iframe>
 	<script>
 	function register() {
-		var request = new XMLHttpRequest();
-		request.onload = function() {
-			link = request.responseText;
-			link = link.slice(1, -1);
-			document.getElementById("Download").href = link;
-			document.getElementById("Download").click();
-		};
-		request.open('GET', '$link$');
-		link = request.send();
-	}
-	function register1() {
-		var request = new XMLHttpRequest();
-		request.onload = function() {
-			link = request.responseText;
-			link = link.slice(1, -1);
-			document.getElementById('my_iframe').src = link;
-			alert("Download will Starts in background after few seconds");
-		};
-		request.open('GET', '$link$');
-		link = request.send();
+		document.getElementById("Download").href = '$link$';
+		document.getElementById("Download").click();
 	}
 	</script>
 	<br>
 	<center><img alt="https://drive.google.com/uc?id=1cOMzqhqHYI4QNyEZk6DUR6pS9l2ES19U&amp;export=download" src="$imglink$" width="400" height="200"></center>
 	<center>
 		<h2><b>Date :   </b><input class="button" value="$date$" id="example1" style="color:black;font-size:30;width:175px;height:50px;" readonly=""></h2></center>
-	<h1><center><b>Download $state$</b></center><br><center><button style="color:black;font-size:30;width:600px;height:70px;" onclick="register()"> Open in Drive </button></center></h1>
-	<h1><center><button style="color:black;font-size:30;width:600px;height:70px;" onclick="register1()"> Download </button></center></h1>
+	<h1><center><b>Download $state$</b></center><br><center><button style="color:black;font-size:30;width:600px;height:70px;" onclick="register()"> Download </button></center></h1>
 	<h1><center><a href="https://garudadev.herokuapp.com/allPapers"><button style="color:black;font-size:30;width:600px;height:70px;"> More Papers</button></a></center></h1>
 	<p id="message">
 		
